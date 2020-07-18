@@ -13,6 +13,19 @@ def respond():
     else:
         return jsonify({"error":"No key or numfiles provided"})
 
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({"importantMsg":"Okbro"})
+
+
+
+
+
+
+
+
+
+
 def callDB(data,ip):
     try:
         connection = psycopg2.connect(user = os.getenv("DB_USER"),
